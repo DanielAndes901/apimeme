@@ -1,0 +1,40 @@
+.batchlist {
+
+  .card .card-body {
+    padding-top: 1.75rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-bottom: 1.0rem;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .text-bought {
+    color: $theme-color-1
+  }
+
+  .text-positive {
+    color: green;
+  }
+
+  .text-negative {
+    color : red;
+  }
+
+  .text-medium {
+    font-weight: 600;
+  }
+
+  .text-symbol {
+    font-weight: 700;
+  }
+
+  p {
+    color : $theme-color-1;
+  }
+
+ 
+}

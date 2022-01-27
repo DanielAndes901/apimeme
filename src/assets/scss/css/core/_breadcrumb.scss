@@ -1,0 +1,20 @@
+.breadcrumb-container {
+  .breadcrumb {
+    @include respond-below(md) {
+      padding: 0;
+    }
+  }
+}
+
+.breadcrumb {
+
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+  margin-top : 0.5rem;
+
+  vertical-align: text-bottom;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "|";
+}

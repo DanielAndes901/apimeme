@@ -1,0 +1,92 @@
+<ng-container *ngIf="registerState$ | async as registerState">
+  <div class="card auth-card">
+    <div class="position-relative image-side ">
+
+      <p class="text-muted mb-0">
+        Please use the form to register.
+        <br>If you are a member, please
+        <a routerLink="/session/login" class="text-white white-underline-link">login</a>.
+      </p>
+    </div>
+    <div class="form-side">
+      
+      <div class="navbar-logo justify-content-center mb-4">
+        <div style="display: flex; width: 100px;" class="dark"></div>
+      </div>
+
+      <form #registerForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+
+        <div class="content-group">
+          <span class="title text-bold-medium ml-1 mb-4">{{ 'Register' | uppercase}} </span>
+
+          <div *ngIf="!registerToken">
+
+            <div *ngIf="!registerState.sendRequestToRegister">
+              <label class="form-group has-float-label">
+                <input class="form-control" required ngModel #fullName="ngModel" name="fullName" />
+                <span>{{ 'session.register.full-name' | translate }}</span>
+                <div *ngIf="!fullName.valid && registerForm.submitted" class="invalid-tooltip">Name is required!</div>
+              </label>
+              <label class="form-group has-float-label">
+                <input class="form-control" required email ngModel #email="ngModel" name="email" />
+                <span>{{ 'session.register.email' | translate }}</span>
+                <div *ngIf="!email.valid && registerForm.submitted" class="invalid-tooltip">Email is required!</div>
+                <div *ngIf="email?.errors?.email && registerForm.submitted" class="invalid-tooltip">Email must be a
+                  valid address!</div>
+              </label>
+              <label class="form-group has-float-label">
+                <input class="form-control" type="password" placeholder="" required ngModel #password="ngModel"
+                  name="password" />
+                <span>{{ 'session.register.password' | translate }}</span>
+                <div *ngIf="!password.valid && registerForm.submitted" class="invalid-tooltip">Password is required!
+                </div>
+              </label>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center" *ngIf="registerState.sendRequestToRegister">
+              <p class="ml-2">Please check your email and confirm your register action
+              </p>
+            </div>
+          </div>
+
+          <div *ngIf="registerToken">
+
+            <div class="d-flex justify-content-center align-items-center">
+              <p class="ml-2">Checking Token ...
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div *ngIf="registerState.sendRequestToRegister"
+          class="ml-2 mr-2 mt-4 d-flex justify-content-start align-items-center">
+          <a routerLink="/session/login">{{ 'session.login.title' | translate }}</a>
+        </div>
+
+        <div *ngIf="!registerState.sendRequestToRegister"
+          class="ml-2 mr-2 mt-4 d-flex justify-content-end align-items-center">
+
+          <button [ngClass]="{'show-spinner': registerState.loading || registerToken}"
+            class="btn btn-primary btn-lg btn-shadow btn-multiple-state"
+            [disabled]="registerState.loading || registerToken">
+
+            <div class="spinner d-inline-block">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+
+            <span class="label">
+              {{ 'session.register.title' | translate | uppercase }}
+            </span>
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</ng-container>
+<simple-notifications></simple-notifications>

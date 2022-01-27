@@ -1,0 +1,185 @@
+
+.about-page {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: $primary-color;
+
+  @include respond-below(sm) {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $primary-color;
+
+    @include respond-below(sm) {
+      font-size: 0.9rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+
+    @include respond-below(sm) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: $theme-color-1;
+    margin-bottom: 2rem;
+
+    @include respond-below(md) {
+      font-size: 1.6rem;
+    }
+
+    @include respond-below(sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: $theme-color-1;
+
+    @include respond-below(sm) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .semi-rounded {
+    border-radius: 1rem !important;
+  }
+
+  .dropdown-toggle::after {
+    opacity: 0.7;
+  }
+
+  .btn-outline-semi-light {
+    border: 1px solid rgba($button-text-color, 0.3);
+    color: $button-text-color;
+    background: transparent;
+
+    &:hover,
+    &:active {
+      border: 1px solid darken($theme-color-1, 10%);
+      background: darken($theme-color-1, 10%);
+    }
+  }
+
+  .landing-footer-nav {
+    z-index: 5 !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+
+    .container {
+      background-color: transparent !important;
+
+      .row {
+        background-color: transparent !important;
+      }
+    }
+
+    
+  }
+
+  .section {
+    margin-bottom: 150px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    @include respond-below(md) {
+      margin-bottom: 100px;
+      padding-top: 60px;
+    }
+
+    &.header {
+
+    background: url($lp-background-path) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 450px;
+    margin-top: -$navbar-height;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    background-size: cover;
+
+      @include respond-below(xl) {
+        margin-top: -$navbar-height-lg;
+      }
+    
+      @include respond-below(lg) {
+        margin-top: -$navbar-height-md;
+      }
+
+      @include respond-below(md) {
+        height: 450px;
+      }
+
+      @include respond-below(sm) {
+        height: 400px;
+        margin-top: -$navbar-height-xs;
+      }
+
+      @include respond-below(xs) {
+        height: 480px;
+      }
+    
+    }
+
+  }
+
+
+  .background-white {
+    background: $button-text-color;
+  }
+
+  .main-row {
+    padding-top: 220px;
+    margin-bottom: 70px;
+    
+    background: transparent;
+    @include respond-below(xl) {
+      padding-top: 180px;
+    }
+
+    @include respond-below(md) {
+      padding-top: 160px;
+    }
+  }
+
+  .content-row {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    min-height: 1000px;
+    background: white;
+    @include respond-below(xl) {
+      padding-top: 60px;
+    }
+
+    @include respond-below(md) {
+      padding-top: 50px;
+    }
+
+    p {
+      color: $button-text-color;
+      font-size: 1.0rem;
+
+      @include respond-below(sm) {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+      }
+    }
+  }
+
+
+}

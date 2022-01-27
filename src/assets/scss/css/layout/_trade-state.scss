@@ -1,0 +1,77 @@
+.trade-state {
+  .title {
+    display: inline-flex;
+    flex-direction: row;
+    vertical-align: middle;
+  }
+
+  .card {
+    .mat-tab-label {
+      font-family: "Nunito", sans-serif !important;
+      color: $theme-color-1;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .card .card-body {
+    padding: 1rem;
+
+    i {
+      color: $theme-color-1 !important;
+    }
+
+    .text-default {
+      color: $theme-color-1 !important;
+    }
+
+    .text-medium {
+      font-size: 0.79rem !important;
+      line-height: 1rem !important;
+    }
+  }
+
+  .table {
+    color: $primary-color;
+    width: 100%;
+    border: 1px rgba($color: $muted-color, $alpha: 0.8)  solid !important;
+  }
+
+
+  .table th {
+
+    color: $primary-color;
+    background-color: #fbfbfb !important;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.5;
+    border-color: rgba($color: $muted-color, $alpha: 0.6) !important;
+    border-bottom: 1px rgba($color: $muted-color, $alpha: 0.3)  solid !important;
+
+    height: 45px !important;
+
+    padding: .25rem .75rem;
+    vertical-align: middle;
+    text-align: center;
+
+    @include respond-below(xxl) {
+      text-overflow: ellipsis;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  }
+
+  .table td { 
+
+    border-color: rgba($color: $muted-color, $alpha: 0.3) !important;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    height: 30px;
+    line-height: 1.5;
+    padding: .5rem;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+}

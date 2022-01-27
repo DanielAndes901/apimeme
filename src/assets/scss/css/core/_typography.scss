@@ -1,0 +1,178 @@
+.text-large {
+  font-size: 1.9rem !important;
+}
+
+.text-icon {
+  font-size: 1.5rem !important;
+}
+
+.text-one {
+  font-size: 1rem !important;
+}
+
+.text-xlarge {
+  font-size: 2.7rem !important;
+}
+
+.text-small {
+  font-size: 0.76rem !important;
+  line-height: 0.9rem !important;
+}
+
+.text-medium {
+  font-size: 0.8rem !important;
+  line-height: 0.96rem !important;
+}
+
+.text-white {
+  color: $button-text-color !important;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.text-bold-medium {
+  font-weight: 600 !important;
+}
+
+.text-bold {
+  font-weight: 800 !important;
+}
+
+
+.text-zero {
+  font-size: 0 !important;
+}
+
+.text-extra-small {
+  font-size: 0.7rem !important;
+}
+
+.text-default {
+  color: $primary-color !important;
+}
+
+.text-muted {
+  color: $muted-color !important;
+}
+
+.text-semi-muted {
+  color: $secondary-color !important;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.color-theme-1 {
+  color: $theme-color-1;
+}
+
+.color-theme-2 {
+  color: $theme-color-2;
+}
+
+.display-options-container {
+  margin-bottom: 0.25rem;
+  @include respond-below(xs) {
+    margin-top: 0.5rem;
+  }
+}
+
+#displayOptions {
+  a {
+    cursor: pointer;
+  }
+
+  a.active i {
+    color: $theme-color-1;
+  }
+
+  button {
+    border-color: $secondary-color;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: $theme-color-1;
+      border-color: $theme-color-1;
+      color: $button-text-color;
+    }
+  }
+
+  .btn-outline-dark:not(:disabled):not(.disabled):active,
+  .btn-outline-dark:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-dark.dropdown-toggle {
+    background-color: $theme-color-1;
+    border-color: $theme-color-1;
+    color: $button-text-color;
+  }
+
+  & > span {
+    padding-top: 0.1rem;
+  }
+
+  .view-icon {
+    svg {
+      width: 19px;
+    }
+
+    .view-icon-svg {
+      fill: $secondary-color;
+    }
+
+    &:hover,
+    &.active {
+      .view-icon-svg {
+        fill: $theme-color-1;
+      }
+    }
+  }
+}
+
+@include respond-above(sm) {
+  .collapse.dont-collapse-sm {
+    display: block !important;
+    height: auto !important;
+    visibility: visible;
+  }
+}
+
+@include respond-above(sm) {
+  .collapse.dont-collapse-sm {
+    display: block !important;
+    height: auto !important;
+    visibility: visible;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.accordion-content {
+  padding-top: 0 !important;
+}
+
+.feedback-container {
+  a {
+    font-size: 1.3em;
+    color: $secondary-color;
+    margin: 0.5rem;
+
+    &:hover,
+    &:active {
+      color: $theme-color-1;
+    }
+  }
+}
+
+.border-radius {
+  border-radius: $border-radius;
+}

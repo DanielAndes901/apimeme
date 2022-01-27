@@ -1,0 +1,110 @@
+.progress {
+  height: 3px;
+  background-color: $separator-color-light;
+}
+
+.progress-bar {
+  background-color: $theme-color-1;
+}
+.progressbar-text {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $primary-color !important;
+}
+
+.progress-bar-circle {
+  width: 54px;
+  height: 54px;
+
+  svg circle:first-of-type {
+    opacity: 0.5;
+  }
+
+  svg path:first-of-type,
+  svg circle:first-of-type {
+    stroke: $separator-color !important;
+  }
+
+  svg path:last-of-type {
+    stroke: $theme-color-1 !important;
+  }
+
+  &.progress-bar-banner {
+    svg path:first-of-type {
+      stroke: mix($theme-color-1, $foreground-color, 70%) !important;
+    }
+
+    svg path:last-of-type {
+      stroke: $button-text-color !important;
+    }
+  }
+}
+
+.progress-banner {
+  height: 200px;
+  background-image: linear-gradient(to right top, $gradient-color-2, $gradient-color-3, $gradient-color-1) !important;
+  transition: 0.5s;
+  background-size: 200% auto;
+  cursor: pointer;
+
+  .lead {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+    @include respond-below(lg) {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    @include respond-below(lg) {
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .progress-bar-circle.progress-bar-banner {
+    width: 120px;
+    height: 120px;
+
+    @include respond-below(lg) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .progress-bar-banner {
+    svg path:first-of-type,
+    svg circle:first-of-type {
+      stroke: darken($theme-color-1, 15%) !important;
+    }
+
+    svg path:last-of-type {
+      stroke: darken($button-text-color, 10%) !important;
+    }
+
+    .progressbar-text {
+      color: $button-text-color !important;
+      font-size: 1.7rem;
+      width: 100%;
+      font-weight: 300;
+
+      @include respond-below(lg) {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+
+  &:hover {
+    background-position: right top;
+  }
+}

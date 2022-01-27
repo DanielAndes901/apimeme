@@ -1,0 +1,294 @@
+body {
+	min-height: calc(100% - 150px);
+	position: relative;
+	padding-bottom: 90px;
+  
+	@include respond-below(xl) {
+	  min-height: calc(100% - 130px);
+	}
+  
+	@include respond-below(lg) {
+	  min-height: calc(100% - 110px);
+	}
+  
+	@include respond-below(sm) {
+	  min-height: calc(100% - 85px);
+	}
+  
+	@include respond-below(xs) {
+	  padding-bottom: 60px;
+	}
+  
+	&.no-footer {
+	  padding-bottom: initial;
+	  footer {
+		display: none;
+	  }
+	}
+  }
+  
+  footer.page-footer {
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+	border-top: 1px solid $separator-color;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+  
+	@include respond-below(xs) {
+	  height: 35px;
+	  padding-top: 1.2rem;
+	  padding-bottom: 1.2rem;
+	}
+  
+	.breadcrumb {
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+  
+	.breadcrumb-item + .breadcrumb-item::before {
+	  color: $theme-color-1;
+	}
+  
+	.container-fluid {
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+  
+	.footer-content {
+	  margin-left: $main-menu-width + $main-margin; //$sub-menu-width
+	  margin-right: $main-margin;
+  
+	  @include respond-below(xl) {
+		margin-left:  $main-margin-lg; //$sub-menu-width-lg + $main-menu-width-lg
+		margin-right: $main-margin-lg;
+	  }
+  
+	  @include respond-below(lg) {
+		margin-left: $main-margin-md; //$sub-menu-width-md + $main-menu-width-md
+		margin-right: $main-margin-md;
+	  }
+  
+	  @include respond-below(sm) {
+		margin-left: $main-margin-xs !important;
+		margin-right: $main-margin-xs !important;
+	  }
+	}
+  }
+  
+  .right-menu {
+	footer.page-footer {
+	  padding-right: $hmw-menu-width;
+	  @include respond-below(lg) {
+		padding-right: 0;
+	  }
+	}
+  }
+  
+  #hmw-container {
+	&.sub-hidden .footer-content,
+	&.menu-sub-hidden .footer-content,
+	&.menu-hidden .footer-content {
+	  margin-left: $main-menu-width + $main-margin;
+	}
+  
+	&.main-hidden .footer-content,
+	&.menu-hidden .footer-content {
+	  margin-left: $main-margin;
+	}
+  
+	&.menu-main-hidden {
+	  .footer-content {
+		margin-left: $main-margin + $sub-menu-width;
+	  }
+	  &.menu-hidden {
+		.footer-content {
+		  margin-left: $main-margin;
+		}
+	  }
+	}
+  
+	@include respond-below(xl) {
+	  &.sub-hidden .footer-content,
+	  &.menu-sub-hidden .footer-content,
+	  &.menu-hidden .footer-content {
+		margin-left: $main-menu-width-lg + $main-margin-lg;
+	  }
+  
+	  &.main-hidden .footer-content,
+	  &.menu-hidden .footer-content {
+		margin-left: $main-margin-lg;
+	  }
+  
+	  &.menu-main-hidden {
+		.footer-content {
+		  margin-left: $main-margin-lg + $sub-menu-width-lg;
+		}
+		&.menu-hidden {
+		  .footer-content {
+			margin-left: $main-margin-lg;
+		  }
+		}
+	  }
+	}
+  
+	@include respond-below(lg) {
+	  &.sub-hidden .footer-content,
+	  &.menu-sub-hidden .footer-content,
+	  &.menu-hidden .footer-content {
+		margin-left: $main-menu-width-md + $main-margin-md;
+	  }
+  
+	  &.main-hidden .footer-content,
+	  &.menu-hidden .footer-content {
+		margin-left: $main-margin-md;
+	  }
+  
+	  &.menu-main-hidden {
+		.footer-content {
+		  margin-left: $main-margin-md + $sub-menu-width-md;
+		}
+		&.menu-hidden {
+		  .footer-content {
+			margin-left: $main-margin-md;
+		  }
+		}
+	  }
+	}
+  }
+  
+  .menu .sub-menu ul li.has-sub-item.active:after {
+	content: " ";
+	background: initial;
+  }
+  
+  .cursor-pointer {
+	cursor: pointer;
+  }
+  .chat-hmw-tab-pane-contacts {
+	height: calc(100vh - 220px);
+  }
+  .chat-hmw-tab-pane-messages {
+	height: calc(100vh - 170px);
+  }
+  
+
+  .rtl {
+	footer.page-footer {
+	  .footer-content {
+		margin-right: $main-menu-width + $main-margin; //$sub-menu-width
+		margin-left: $main-margin;
+  
+		@include respond-below(xl) {
+		  margin-right: $main-menu-width-lg + $main-margin-lg; //$sub-menu-width-lg
+		  margin-left: $main-margin-lg;
+		}
+  
+		@include respond-below(lg) {
+		  margin-right: $main-menu-width-md + $main-margin-md; //$sub-menu-width-md
+		  margin-left: $main-margin-md;
+		}
+  
+		@include respond-below(sm) {
+		  margin-right: $main-margin-xs !important;
+		  margin-left: $main-margin-xs !important;
+		}
+	  }
+	}
+  
+	#hmw-container {
+	  &.sub-hidden .footer-content,
+	  &.menu-sub-hidden .footer-content,
+	  &.menu-hidden .footer-content {
+		margin-right: $main-menu-width + $main-margin;
+		margin-left: $main-margin;
+	  }
+  
+	  &.main-hidden .footer-content,
+	  &.menu-hidden .footer-content {
+		margin-right: $main-margin;
+		margin-left: $main-margin;
+	  }
+  
+	  &.menu-main-hidden {
+		.footer-content {
+		  margin-right: $main-margin + $sub-menu-width;
+		  margin-left: $main-margin;
+		}
+		&.menu-hidden {
+		  .footer-content {
+			margin-right: $main-margin;
+			margin-left: $main-margin;
+		  }
+		}
+	  }
+  
+	  @include respond-below(xl) {
+		&.sub-hidden .footer-content,
+		&.menu-sub-hidden .footer-content,
+		&.menu-hidden .footer-content {
+		  margin-right: $main-menu-width-lg + $main-margin-lg;
+		  margin-left: $main-margin-lg;
+		}
+  
+		&.main-hidden .footer-content,
+		&.menu-hidden .footer-content {
+		  margin-right: $main-margin-lg;
+		  margin-left: $main-margin-lg;
+		}
+  
+		&.menu-main-hidden {
+		  .footer-content {
+			margin-right: $main-margin-lg + $sub-menu-width-lg;
+			margin-left: $main-margin-lg;
+		  }
+		  &.menu-hidden {
+			.footer-content {
+			  margin-right: $main-margin-lg;
+			  margin-left: $main-margin-lg;
+			}
+		  }
+		}
+	  }
+  
+	  @include respond-below(lg) {
+		&.sub-hidden .footer-content,
+		&.menu-sub-hidden .footer-content,
+		&.menu-hidden .footer-content {
+		  margin-right: $main-menu-width-md + $main-margin-md;
+		  margin-left: $main-margin-md;
+		}
+  
+		&.main-hidden .footer-content,
+		&.menu-hidden .footer-content {
+		  margin-right: $main-margin-md;
+		  margin-left: $main-margin-md;
+		}
+  
+		&.menu-main-hidden {
+		  .footer-content {
+			margin-right: $main-margin-md + $sub-menu-width-md;
+			margin-left: $main-margin-md;
+		  }
+		  &.menu-hidden {
+			.footer-content {
+			  margin-right: $main-margin-md;
+			  margin-left: $main-margin-md;
+			}
+		  }
+		}
+	  }
+	}
+  
+	&.right-menu {
+	  footer.page-footer {
+		padding-left: $hmw-menu-width;
+		padding-right: initial;
+		@include respond-below(lg) {
+		  padding-left: 0;
+		}
+	  }
+	}
+  }
+  

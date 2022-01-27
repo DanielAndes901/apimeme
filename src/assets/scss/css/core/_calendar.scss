@@ -1,0 +1,84 @@
+.fc {
+  height: 490px !important;
+  .table-bordered th,
+  .table-bordered td {
+    border: none;
+  }
+
+  .fc-scrollgrid-sync-table {
+    height: 400px !important;
+  }
+  .fc-toolbar-title {
+    font-size: 0.85rem !important;
+    line-height: 1.3rem !important;
+  }
+  .fc-day {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    font-size: 0.8rem !important;
+    border-color: $separator-color-light !important;
+  }
+  .fc-col-header-cell {
+    color: $theme-color-1;
+  }
+
+  .fc-day:not(:last-child) {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+  }
+  .fc-day:last-child {
+    border-right: 0px solid;
+    border-bottom: 1px solid;
+  }
+  .table-bordered {
+    border: unset !important;
+  }
+  .cal-month-view .cal-cell-row {
+    border-bottom: 1px solid;
+    border-color: $separator-color-light;
+  }
+
+  .fc-day:hover {
+    background: $foreground-color !important;
+  }
+  .fc-day-today {
+    color: $theme-color-1;
+    background-color: $separator-color-light !important;
+  }
+  .fa {
+    font-family: "simple-line-icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  .fa-chevron-right::before {
+    content: "\e606";
+  }
+  .fa-chevron-left::before {
+    content: "\e605";
+  }
+  .fc-toolbar-chunk{
+    .btn-group{
+      .btn{
+        height: 32px !important;
+      }
+    }
+    .fc-today-button{
+      height: 32px;
+    line-height: 1rem;
+    }
+  }
+  
+  .fc-toolbar.fc-header-toolbar .fc-prev-button {
+    margin-right: 0;
+  }
+  
+  .fc-toolbar.fc-header-toolbar .fc-next-button {
+     margin-right: 5px;
+  }
+
+}

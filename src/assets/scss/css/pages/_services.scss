@@ -1,0 +1,209 @@
+.hmw-services-page {
+  
+  .home-text {
+
+    p {
+      color: $primary-color;
+      font-size: 1.1rem;
+
+      @include respond-below(sm) {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+      }
+    }
+
+    .display-1 {
+      font-size: 2rem;
+      line-height: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.1em;
+      color: $theme-color-1;
+
+      @include respond-below(md) {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+      }
+
+      @include respond-below(sm) {
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+      }
+
+      @include respond-below(xs) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+      }
+    }
+
+    @include respond-below(sm) {
+      margin-top: 0;
+    }
+  }
+
+  .section {
+    margin-bottom: 150px;
+    padding-top: 400px;
+    padding-bottom: 50px;
+
+    @include respond-below(md) {
+      margin-bottom: 100px;
+      padding-top: 60px;
+    }
+
+    &.home {
+      background: url($lp-background-portfolio-path) no-repeat center top;
+      background-color: white;
+
+      margin-top: -$navbar-height;
+      margin-bottom: 0;
+    }
+  }
+
+  .card {
+    border: $border-radius;
+    background: $foreground-color;
+    height: 300px;
+    display: inline-block;
+    overflow: hidden;
+
+    .card-body {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .card-img-top {
+        min-height: 120%;
+        min-width: 120%;
+
+        opacity: 1;
+        filter: alpha(opacity=100);
+
+        margin-left: -50px;
+        margin-top: -50px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .card-button {
+        display: none;
+        border: $border-radius;
+
+        width: 200px;
+        height: 45px;
+        position: absolute;
+
+        text-align: center;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: 18px;
+        font-weight: 600;
+
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .pt-title {
+        display: none;
+
+        width: 200px;
+        height: 45px;
+        position: absolute;
+
+        font-size: 24px;
+        font-weight: 600;
+
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        .card-img-top {
+          transform: rotate(2deg);
+          opacity: 0.5;
+          filter: blur(5px);
+          filter: alpha(opacity=50);
+        }
+
+        .card-button {
+          display: flex;
+          background-color: white;
+          color: $theme-color-1 !important;
+
+          &:hover {
+            background-color: $theme-color-1;
+            color: white !important;
+            cursor: pointer;
+          }
+        }
+
+        .pt-title {
+          display: inline-flex;
+
+          text-align: center;
+          justify-content: center !important;
+          align-items: center !important;
+          background-color: transparent !important;
+          color: $theme-color-1 !important;
+        }
+      }
+    }
+  }
+}
+
+.hmw-portfolio-detail-page {
+  .section {
+    margin-bottom: 150px;
+    padding-top: 200px;
+    padding-bottom: 50px;
+
+    &.home {
+      background: url($lp-background-portfolio-detail-path) no-repeat center top;
+      background-color: transparent;
+
+      margin-top: -$navbar-height;
+      margin-bottom: 0;
+    }
+  }
+
+  .detail-area {
+    margin: 50px;
+  }
+
+  .card {
+    //box-shadow: none;
+
+    border-radius: 0.6rem;
+    overflow: hidden;
+
+    .card-body {
+      //margin: 0px !important;
+      //padding: 0 !important;
+
+      img {
+        width: 100% !important;
+      }
+
+      .card-content {
+        margin-top: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 60px;
+
+        .visite-button {
+          background-color: $theme-color-1;
+          color: white !important;
+          font-size: 16px;
+          font-weight: 600;
+
+          &:hover {
+            background-color: transparent;
+            color: $theme-color-1 !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

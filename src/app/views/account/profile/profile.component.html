@@ -1,0 +1,136 @@
+<div class="container">
+
+
+    <div class="card-profile">
+
+        <ng-container *ngIf="accountCloseState$ | async as accountCloseState">
+            <div class="card ml-4 mr-4">
+
+                <div class="card-header">
+                    <h5 class="ml-4 card-title text-bold mt-2">User Profile</h5>
+                </div>
+
+                <div class="card-content">
+
+                    <div *ngIf="currentUser" class="pt-3">
+
+                        <div class="ml-4 mb-3">
+                            <div class="w-50 text-left text-bold text-semi-muted">
+                                <span>User Name:</span>
+                            </div>
+                            <div class="w-50 text-left">
+                                <span>{{currentUser.fullName}}</span>
+                            </div>
+                        </div>
+                        <div class="ml-4 mb-3">
+                            <div class="w-50 text-left text-bold text-semi-muted">
+                                <span>Email:</span>
+                            </div>
+                            <div class="w-50 text-left">
+                                <span>{{currentUser.email}}</span>
+                            </div>
+                        </div>
+                        <div class="ml-4 mb-3">
+                            <div class="w-50 text-left text-bold text-semi-muted">
+                                <span>Type :</span>
+                            </div>
+                            <div class="w-50 text-left">
+                                <span>{{currentUser.userType}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer text-right">
+                    <button [ngClass]="{'show-spinner': accountCloseState.pending}" class="btn btn-primary btn-lg btn-shadow btn-multiple-state" [disabled]="accountCloseState.pending"
+                        (click)="onCloseAccount()">
+
+                        <div class="spinner d-inline-block">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <span class="label">Close My Account</span>
+                    </button>
+                </div>
+
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="profileState$ | async as profileState">
+            <div class="card ml-4 mr-4 mt-4">
+
+                <div class="card-header">
+                    <h5 class="ml-4 card-title text-bold mt-2">Platforms</h5>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="pt-3">
+
+                        <form id="profileForm" [formGroup]="profileGroup">
+
+                            <div class="ml-4 mr-4 d-flex flex-row mb-3">
+                                <div class="w-50 text-left text-bold text-semi-muted">
+                                    <label>ETRADE:</label>
+                                </div>
+
+                                <div class="w-50 text-right">
+                                    <mat-slide-toggle color="primary" formControlName="etradeState">Enabled
+                                    </mat-slide-toggle>
+                                </div>
+                            </div>
+
+                            <div class="ml-4 mr-4 d-flex flex-row mb-3">
+                                <div class="w-50 text-left text-bold text-semi-muted">
+                                    <label>InteractiveBroker:</label>
+                                </div>
+
+                                <div class="w-50 text-right">
+                                    <mat-slide-toggle color="primary" formControlName="ibState">Enabled
+                                    </mat-slide-toggle>
+                                </div>
+
+                            </div>
+                            <div class="ml-4 mr-4 d-flex flex-row mb-3">
+                                <div class="w-50 text-left text-bold text-semi-muted">
+                                    <label>Demo :</label>
+                                </div>
+
+                                <div class="w-50 text-right">
+                                    <mat-slide-toggle color="primary" formControlName="demoState">Enabled
+                                    </mat-slide-toggle>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer text-right">
+                    <!-- <button mat-raised-button color="primary" [disabled]="profileState.pending"
+                        class="button-lg mb-1 mr-4" (click)="onSubmit()"><span>SET</span>
+                        <img *ngIf="profileState.pending" class="pl-3"
+                            src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    </button> -->
+
+                    <button [ngClass]="{'show-spinner': profileState.pending}" class="btn btn-primary btn-lg btn-shadow btn-multiple-state" [disabled]="profileState.pending"
+                        (click)="onSubmit()">
+
+                        <div class="spinner d-inline-block">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <span class="label">SET</span>
+                    </button>
+
+                </div>
+
+            </div>
+        </ng-container>
+    </div>
+</div>

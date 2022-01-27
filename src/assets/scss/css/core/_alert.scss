@@ -1,0 +1,273 @@
+.alert {
+  border-radius: 0;
+}
+
+.alert-primary {
+  color: $theme-color-1;
+  background-color: mix($theme-color-1, $background-color, 20%);
+  border-color: rgba($theme-color-1, 0.1);
+}
+
+.alert-secondary {
+  color: $theme-color-2;
+  background-color: mix($theme-color-2, $background-color, 20%);
+  border-color: rgba($theme-color-2, 0.1);
+}
+
+.alert-success {
+  color: $success-color;
+  background-color: mix($success-color, $background-color, 20%);
+  border-color: rgba($success-color, 0.1);
+}
+
+.alert-info {
+  color: $info-color;
+  background-color: mix($info-color, $background-color, 20%);
+  border-color: rgba($info-color, 0.1);
+}
+
+.alert-warning {
+  color: $warning-color;
+  background-color: mix($warning-color, $background-color, 20%);
+  border-color: rgba($warning-color, 0.1);
+}
+
+.alert-danger {
+  color: $error-color;
+  background-color: mix($error-color, $background-color, 20%);
+  border-color: rgba($error-color, 0.1);
+}
+
+.alert-light {
+  color: mix($primary-color, $background-color, 60%);
+  background-color: mix($light-btn-background, $background-color, 20%);
+  border-color: rgba($light-btn-background, 0.1);
+}
+
+.alert-dark {
+  color: $dark-btn-background;
+  background-color: mix($dark-btn-background, $background-color, 20%);
+  border-color: rgba($dark-btn-background, 0.1);
+}
+
+.alert-dismissible .close,
+button.close {
+  text-shadow: initial;
+}
+
+.alert *[data-notify="title"] {
+  display: block;
+  font-size: 0.9rem;
+}
+
+div[data-notify="container"] {
+  padding: 18px;
+}
+
+.simple-notification {
+  border-radius: $border-radius;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.simple-notification .icon {
+  padding-top: 10px !important;
+  width: 40px !important;
+  height: 50px !important;
+}
+
+.simple-notification .sn-title {
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.simple-notification .sn-content {
+  font-size: 0.8rem !important;
+}
+
+.simple-notification.success {
+  color: $success-color !important;
+  background-color: mix($success-color, $background-color, 20%) !important;
+  border-color: rgba($success-color, 0.1) !important;
+
+  .icon svg {
+    fill: $success-color !important;
+  }
+}
+
+.simple-notification .sn-progress-loader {
+  margin: 15px 7%;
+  height: 2px !important;
+  width: 86% !important;
+  top: initial !important;
+  bottom: 0 !important;
+  opacity: 0.75;
+}
+
+.simple-notification.success .sn-progress-loader span {
+  border-radius: $border-radius;
+}
+
+.simple-notification.bare {
+  .icon {
+    display: none;
+  }
+}
+
+.simple-notification.outline.primary {
+  background-color: $foreground-color !important;
+  border: 1px solid $theme-color-1 !important;
+  color: $primary-color !important;
+
+  .sn-title {
+    color: $theme-color-1 !important;
+  }
+
+  .sn-progress-loader span {
+    background: $theme-color-1 !important;
+  }
+}
+
+.simple-notification.outline.secondary {
+  background-color: $foreground-color !important;
+  border: 1px solid $theme-color-2 !important;
+  color: $primary-color !important;
+
+  .sn-title {
+    color: $theme-color-2 !important;
+  }
+}
+
+.simple-notification.outline.info {
+  background-color: $foreground-color !important;
+  border: 1px solid $info-color !important;
+  color: $primary-color !important;
+
+  .sn-title {
+    color: $info-color !important;
+  }
+  .icon svg {
+    fill: $info-color !important;
+  }
+}
+
+.simple-notification.outline.success {
+  background-color: $foreground-color !important;
+  border: 1px solid $success-color !important;
+  color: $primary-color !important;
+  .sn-title {
+    color: $success-color !important;
+  }
+  .icon svg {
+    fill: $success-color !important;
+  }
+}
+
+.simple-notification.outline.warn {
+  background-color: $foreground-color !important;
+  border: 1px solid $warning-color !important;
+  color: $primary-color !important;
+  .sn-title {
+    color: $warning-color !important;
+  }
+  .icon svg {
+    fill: $warning-color !important;
+  }
+}
+
+.simple-notification.outline.error {
+  background-color: $foreground-color !important;
+  border: 1px solid $error-color !important;
+  color: $primary-color !important;
+  .sn-title {
+    color: $error-color !important;
+  }
+  .icon svg {
+    fill: $error-color !important;
+  }
+}
+
+.simple-notification.primary {
+  color: $theme-color-1 !important;
+  background-color: mix($theme-color-1, $background-color, 20%) !important;
+  border-color: rgba($theme-color-1, 0.1) !important;
+  .sn-progress-loader {
+    background: rgba($color: $theme-color-1, $alpha: 0.1) !important;
+    span {
+      background: rgba($color: $theme-color-1, $alpha: 0.5) !important;
+    }
+  }
+}
+
+.simple-notification.secondary {
+  color: $theme-color-2 !important;
+  background-color: mix($theme-color-2, $background-color, 20%) !important;
+  border-color: rgba($theme-color-2, 0.1) !important;
+  .sn-progress-loader {
+    background: rgba($color: $theme-color-2, $alpha: 0.1) !important;
+    span {
+      background: rgba($color: $theme-color-2, $alpha: 0.5) !important;
+    }
+  }
+}
+
+.simple-notification.info {
+  color: $info-color !important;
+  background-color: mix($info-color, $background-color, 20%) !important;
+  border-color: rgba($info-color, 0.1) !important;
+  .icon svg {
+    fill: $info-color !important;
+  }
+  .sn-progress-loader {
+    background: rgba($color: $info-color, $alpha: 0.1) !important;
+    span {
+      background: rgba($color: $info-color, $alpha: 0.5) !important;
+    }
+  }
+}
+
+.simple-notification.error {
+  color: $error-color !important;
+  background-color: mix($error-color, $background-color, 20%) !important;
+  border-color: rgba($error-color, 0.1) !important;
+  .icon svg {
+    fill: $error-color !important;
+  }
+  .sn-progress-loader {
+    background: rgba($color: $error-color, $alpha: 0.1) !important;
+    span {
+      background: rgba($color: $error-color, $alpha: 0.5) !important;
+    }
+  }
+}
+
+.simple-notification.success {
+  color: $success-color !important;
+  background-color: mix($success-color, $background-color, 20%) !important;
+  border-color: rgba($success-color, 0.1) !important;
+  .icon svg {
+    fill: $success-color !important;
+  }
+  .sn-progress-loader {
+    background: rgba($color: $success-color, $alpha: 0.1) !important;
+    span {
+      background: rgba($color: $success-color, $alpha: 0.5) !important;
+    }
+  }
+}
+
+.simple-notification.warn {
+  color: $warning-color !important;
+  background-color: mix($warning-color, $background-color, 20%) !important;
+  border-color: rgba($warning-color, 0.1) !important;
+  .icon svg {
+    fill: $warning-color !important;
+  }
+  .sn-progress-loader {
+    background: rgba($color: $warning-color, $alpha: 0.1) !important;
+    span {
+      background: rgba($color: $warning-color, $alpha: 0.5) !important;
+    }
+  }
+}

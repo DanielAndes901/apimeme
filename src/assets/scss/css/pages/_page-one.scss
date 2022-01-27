@@ -1,0 +1,48 @@
+.page-one {
+  min-height: 900px;
+
+
+  .thumb-element {
+    .card {
+      border: $border-radius;
+      box-shadow: none;
+      background: $foreground-color;
+      height: 210px;
+      width: 100%;
+
+      display: inline-block;
+      overflow: hidden;
+
+      background-color: rgb(223, 240, 240);
+
+      .card-img-top {
+        height: 150px !important;
+        width: 100%;        
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        padding: 0.1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+       
+
+        .pt-title {
+          display: inline-flex;
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          font-size: 20px;
+          text-align: center;
+          justify-content: center !important;
+          align-items: center !important;
+          background-color: transparent !important;
+          color: $theme-color-1 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="session-page">
+
+  <div class="section">
+
+      <div class="container">
+        <div class="col-12 col-md-10 mx-auto my-auto" [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.path">
+          <router-outlet #o="outlet"></router-outlet>
+        </div>
+      </div>
+   
+  </div>
+
+
+</div>

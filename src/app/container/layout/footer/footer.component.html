@@ -1,0 +1,34 @@
+<div class="footer-colored">
+
+    <div class="container pb-4 pt-4 text-center justify-content-center">
+
+        <div class="row">
+            <div class="col-xl-3"></div>
+            <div class="col-xl-6">
+
+                <ul class="navbar-nav d-inline-block d-lg-flex flex-row justify-content-between">
+                    <li class="nav-item" *ngFor="let item of menuService.getFooterMenu()">
+                        <a [routerLink]="[item.link]">{{item.name | uppercase}}</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-xl-3"></div>
+        </div>
+
+        <hr style="border-color: rgb(94, 94, 94);">
+
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="row justify-content-center">
+
+                    <p class="text-center text-muted">&copy; Join Jobs and skills 2019</p>
+                    <p class="ml-2 text-muted">All rights reserved</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.listing-card-container {
+  .listing-heading {
+    height: 45px;
+    overflow: hidden;
+
+    @include respond-below(xs) {
+      height: 40px;
+    }
+  }
+
+  .listing-desc {
+    height: 60px;
+    overflow: hidden;
+    line-height: 1.4;
+
+    @include respond-below(lg) {
+      height: 60px;
+    }
+  }
+}

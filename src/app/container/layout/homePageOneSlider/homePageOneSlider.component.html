@@ -1,0 +1,29 @@
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
+   (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+
+   <div ngxSlickItem *ngFor="let slide of slides">
+
+      <div class="ngx-slider-content">
+
+         <div class="slide-card">
+            
+            <div class="text-side">
+
+               <div class="slider-text-area">
+                  <h2>{{ slide.title }}</h2>
+                  <p [innerHTML]="slide.content"></p>
+               </div>
+            </div>
+
+            <div class="image-side">
+               <div [class]="slide.image  + ' bannerStyle'">
+               </div>
+            </div>
+
+         </div>
+
+
+      </div>
+
+   </div>
+</ngx-slick-carousel>

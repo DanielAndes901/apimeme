@@ -1,0 +1,32 @@
+.context-menu-list {
+  box-shadow: initial;
+  border-radius: $border-radius;
+  background: $input-background;
+  border-color: rgba($primary-color, 0.15);
+  padding: 0.5rem 0;
+}
+
+.context-menu-item {
+  padding: 0.75rem 1.5rem;
+  background: $input-background;
+  color: $primary-color;
+
+  &.context-menu-hover {
+    color: $primary-color;
+    text-decoration: none;
+    background-color: $background-color;
+  }
+}
+
+.context-menu-item span {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+
+.list .card.context-menu-active,
+.list .card.active {
+  @include depth(2);
+}

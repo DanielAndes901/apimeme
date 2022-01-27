@@ -1,0 +1,23 @@
+<div class="menu" (click)="menuClicked($event)">
+    <div class="main-menu">
+        <perfect-scrollbar class="scroll" [config]="{suppressScrollX: true}">
+            <ul class="list-unstyled">
+
+                <li *ngFor="let sub of getSubMenuItems()"
+                    [ngClass]="{'active': currentUrl === sub.link ,'has-sub-item' : sub.subs&& sub.subs.length>0 }">
+
+                   <a *ngIf="sub.newWindow && (!sub.subs || sub.subs.length<=0)" [href]="[sub.link]" target="_blank">
+                       <i [class]="'glyph-icon ' + sub.icon"></i>
+                       <span class="d-inline-block">{{sub.name | translate}}</span>
+                   </a>
+
+                    <a *ngIf="!sub.newWindow && (!sub.subs || sub.subs.length<=0)" [routerLink]="[sub.link]" routerLinkActive="active">
+                        <i [class]="'glyph-icon ' + sub.icon"></i>
+                        <span class="d-inline-block">{{sub.name | translate}}</span>
+                    </a>
+                </li>
+            </ul>
+        </perfect-scrollbar>
+    </div>
+
+</div>

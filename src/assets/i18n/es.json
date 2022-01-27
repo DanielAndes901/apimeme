@@ -1,0 +1,293 @@
+{
+  "general": {
+    "copyright": "Modern-web © 2020 All Rights Reserved."
+  },
+  "title": {
+    "long": "Modern-web Trading Business",
+    "short": "Modern-web"
+  },
+  "session": {
+
+    "error-empty" : "This field should not be empty",
+    "error-format" : "This field should be matched format",
+
+    "login": {
+      "title" : "Login",
+      "send": "Login",
+      "placeholder" : {
+        "email" : "Email",
+        "password" : "Password"
+      },
+      "keep" : "Keep me logged in",
+      "forgot-password" : "Forgot Password?",
+      "dont-have-account" : "Don't have an account?",
+      "create-one" : "Click here to create one"
+    },
+    "register":  {
+      "title" : "Register",
+      "first-name" : "First Name",
+      "last-name" : "Last Name",
+      "full-name" : "Full Name",
+      "email" : "Email",
+      "password" : "Password",
+      "confirm-password": "Confirm Password",
+      "send": "Register"
+    }, 
+
+    "forgot":  {
+      "title" : "Forgot Password",
+      "email" : "Email",
+      "confirm-email" : "Confirm Email",
+      "reset": "Reset",
+      "new-password" : "New Password",
+      "confirm-password" : "Confirm Password",
+      "dont-need-reset" : "If you don't need to reset password, please",
+      "token-sent" : "Reset Token has been sent to your email, please check it and reset password or please"
+    }, 
+    
+
+    "reset-password-button": "Reset",
+    "buy": "LOGIN",
+    "username": "Username",
+    "code": "Reset Code",
+    "send-button": "Send",
+    "letter": "Letter"
+  },
+  "menu": {
+    "header": {
+      "home": "Home",
+      "etrade": "ETRADE",
+      "ibkr": "IBKR",
+      "demo": "DEMO",
+      "news": "NEWS",
+      "analysis": "ANALYSIS",
+      "settings": "Settings",
+      "login": "Login",
+      "logout": "Logout",
+      "profile" : "Profile"
+    },
+    "footer": {
+      "about-us": "About-Us",
+      "privacy-policy": "Privacy Policy",
+      "terms-of-service": "Terms Of Service",
+      "faq": "FAQ",
+      "contact-us": "Contact-Us"
+    },
+    "sub-menu": {
+      "dashboard": "Dashboard",
+      "orders": "Orders",
+      "profit": "Profit",
+      "news" : "Today News",
+      "settings": "Settings",
+      "watchlist": "Watchlist",
+      "analysis": "Analysis",
+      "result-compare": "Result Compare",
+      "auth-login" : "Auth Login",
+      "account-setup" : "Account Setup",
+      "profile" : "Profile"
+    }
+  },
+
+  "etrade" : {
+
+    "auth-login" : {
+      "title" : "Etrade Auth Login",
+      "message-sent" : "A message has been sent to your email, please check it and enter authentication code.",
+      "click-here" : "Click here if you did not receive the message.",
+      "placeholder" : "Authentication Code From Etrade",
+      "should-not-empty" : "This field should not be empty.",
+      "not-enabled" : "You are not enabled to trade on Etrade platform. You have to configure etrade settings before start trading."
+    },
+
+    "settings" : "Portfolio Settings"
+  },
+
+  "ibkr" : {
+    "auth-login" : {
+      "title" : "InteractiveBroker Auth Login",
+      "not-enabled" : "You are not enabled to trade on Etrade platform. You have to configure etrade settings before start trading.",
+      "not-ready" : "InteractiveBroker is not ready to do trading now"
+    }
+  },
+  "demo" : {
+    "settings" : "Portfolio Settings"
+  },
+
+  "layout" : {
+    "counter" : {
+      "until-open" : "Count Down to Open Time :",
+      "until-close" : "Count Down to Close Time : "
+    },
+    "trade-settings" : "Trade Settings",
+    "trade-result" : "Trade Result",
+    "portfolio" : "Portfolio",
+    "graph" : {
+      "today" : "Today",
+      "profit" : "Profit",
+      "profit-year" : "Year",
+      "daily-profit" : "Daily Profit",
+      "profit-percent" : "Profit Percent",
+      "market-state" : "Market State",
+      "real-time-price" : "Real time Price",
+      "month-price": "30 Days Price",
+      "week-price" : "Week Price",
+      "year-price" : "Year Price"
+    },
+    "orders" : {
+      "open-orders" : "Open Orders",
+      "closed-orders" : "Closed Orders"
+    },
+
+    "transactions" : {
+      "title" : "Transactions",
+      "export-pdf" : "Export PDF",
+      "symbol" : "Symbol",
+      "time-period" : "Time Period",
+      "from" : "From",
+      "to" : "To"
+    },
+    "watchlist" : {
+      "watch-list" : "Watch List",
+      "bought-list" : "Bought List"
+    },
+    "portfolio-settings" : {
+
+      "title" : "Portfolio Settings",
+
+      "etrade" : {
+        "buying-parameters" : {
+          "title" : "Buying Parameters",
+          "cash-per-lot" : "Cash Per Lot",
+          "buy-strike-min" : "Buy Strike Minimum",
+          "buy-strike-max" : "Buy Strike Maximum",
+          "buying-fee" : "Buying Fee",
+          "mask-for-buy-param" : "Mask For Buy Param",
+          "factor-for-month-buy-param" : "Factor For Month-Buy-Param"
+        },
+        "re-buying-parameters" : {
+          "title" : "Re-Buying Parameters",
+          "allow-re-buying" : "Allow Re-Buying",
+          "allowed-hours-limit" : "Allowed Hours Limit For Re-Buying",
+          "max-lot-length" : "Max Lot Length",
+          "difference-per-lot": "Difference Per Lot",
+          "adding-amount-percent" : "Adding Amount Percent"
+        },
+        "selling-parameters" : {
+          "title" : "Selling Parameters",
+          "target-profit" : "Target Profit",
+          "min-profit-percent" : "Minimum Profit Percent",
+          "selling-fee" : "Selling Fee"
+        },
+        "strategy" : {
+          "title" : "Strategy",
+          "buying-strategy" : "Buying Strategy",
+          "selling-strategy" : "Selling Strategy"
+        },
+        "cash-management" : {
+          "title" : "Cash Management Parameters",
+          "min-keeping-cash" : "Minimum Keeping Cash",
+          "allowed-negative-cash" : "Allowed Negative Cash",
+          "invest-ratio" : "Invest Ratio",
+          "disposable-ratio" : "Disposable Ratio",
+          "tax-ratio" : "Tax Ratio"
+        },
+        "watchlist-filter" : {
+          "title" : "Watchlist Filter Parameters",
+          "moving-speed" : "Moving Speed",
+          "average-trading" : "Average Trading In A Day",
+          "lowest-buy-price" : "Lowest Buy Price",
+          "minimum-trading-volume" : "Minimum Trading Volume",
+          "trend-check" : "Trend Check"
+        }
+      },
+
+      "demo" : {
+        "cash-management" : {
+          "title" : "Cash Management",
+          "cash-buying-power" : "Cash Buying Power"
+        },
+        "fee" : {
+          "etrade" : {
+            "title" : "Etrade Transaction Fee",
+            "buying-fee" : "Buying Fee",
+            "selling-fee" : "Selling Fee"
+          }, 
+          "ibkr" : {
+            "title" : "IBKR Transaction Fee",
+            "buying-fee" : "Buying Fee Per Share",
+            "selling-fee" : "Selling Fee Per Share"
+          }, 
+          "apply" : "Apply"
+        },
+
+        "buying-parameters" : {
+          "title" : "Buying Parameters",
+          "cash-per-lot" : "Cash Per Lot",
+          "buy-strike-min" : "Buy Strike Minimum",
+          "buy-strike-max" : "Buy Strike Maximum",
+          "buying-fee" : "Buying Fee",
+          "mask-for-buy-param" : "Mask For Buy Param",
+          "factor-for-month-buy-param" : "Factor For Month-Buy-Param"
+        },
+        "re-buying-parameters" : {
+          "title" : "Re-Buying Parameters",
+          "allow-re-buying" : "Allow Re-Buying",
+          "allowed-hours-limit" : "Allowed Hours Limit For Re-Buying",
+          "max-lot-length" : "Max Lot Length",
+          "difference-per-lot": "Difference Per Lot",
+          "adding-amount-percent" : "Adding Amount Percent"
+        },
+        "selling-parameters" : {
+          "title" : "Selling Parameters",
+          "target-profit" : "Target Profit",
+          "min-profit-percent" : "Minimum Profit Percent"
+        },
+        "strategy" : {
+          "title" : "Strategy",
+          "buying-strategy" : "Buying Strategy",
+          "selling-strategy" : "Selling Strategy"
+        },
+        "watchlist-filter" : {
+          "title" : "Watchlist Filter Parameters",
+          "moving-speed" : "Moving Speed",
+          "average-trading" : "Average Trading In A Day",
+          "lowest-buy-price" : "Lowest Buy Price",
+          "minimum-trading-volume" : "Minimum Trading Volume",
+          "trend-check" : "Trend Check"
+        }
+      }
+
+    }
+  },
+
+  "button" : {
+    "submit" : "Submit",
+    "login" : "Login",
+    "register" : "Register"
+  },
+
+  "settings": {
+    "title" : "Settings",
+    "animations": {
+      "elements": "Navigation page elements slide up",
+      "page": "Navigation whole page transition",
+      "title": "Animations"
+    },
+    "language": {
+      "title" : "Language",
+      "en": "English",
+      "es": "Spanish"
+    },
+    "themes": {
+      "blue": "Blue",
+      "dark": "Dark",
+      "light": "Light",
+      "nature": "Nature",
+      "night-mode": "Auto night mode (from 21:00 to 7:00)",
+      "placeholder": "Color Theme",
+      "saneago": "",
+      "sticky-header": "Sticky header",
+      "title": "Themes"
+    }
+  }
+}

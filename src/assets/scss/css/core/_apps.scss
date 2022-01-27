@@ -1,0 +1,124 @@
+.hmw-menu {
+  z-index: 1;
+  @include depth(1);
+  width: $hmw-menu-width;
+  height: 100%;
+  float: right;
+  background: $foreground-color;
+  transition: transform $menu-collapse-time;
+  position: fixed;
+  right: 0;
+  top: $navbar-height;
+  height: calc(100% - #{$navbar-height});
+
+  @include respond-below(xl) {
+    top: $navbar-height-lg;
+    height: calc(100% - #{$navbar-height-lg});
+  }
+
+  @include respond-below(lg) {
+    top: $navbar-height-md;
+    transform: translateX($hmw-menu-width);
+    height: calc(100% - #{$navbar-height-md});
+  }
+
+  @include respond-below(sm) {
+    top: $navbar-height-xs;
+    height: calc(100% - #{$navbar-height-xs});
+  }
+
+  .scroll {
+    height: 100%;
+    .ps__thumb-y {
+      right: 0;
+    }
+  }
+
+  &.shown {
+    transform: translateX(0);
+  }
+
+  .hmw-menu-button {
+    position: absolute;
+    left: -28px;
+    background: $foreground-color;
+    top: $main-margin - 15;
+    padding: 12px 8px 12px 5px;
+    border-radius: 0.2rem;
+    color: $secondary-color;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.04);
+    font-size: 15px;
+    line-height: 0;
+
+    @include respond-below(xl) {
+      top: $main-margin-lg - 14;
+    }
+
+    @include respond-below(lg) {
+      top: $main-margin-md - 13;
+    }
+
+    @include respond-below(sm) {
+      top: $main-margin-xs - 2;
+    }
+  }
+
+  ul {
+    li {
+      margin-bottom: 5px;
+
+      a {
+        font-size: 13px;
+        display: block;
+        padding: 3px 0;
+        
+        &:hover i {
+          color: $theme-color-1;
+          text-decoration: none;
+        }
+      }
+
+      i {
+        font-size: 1.2em;
+        margin-right: 10px;
+        color: $secondary-color;
+        vertical-align: unset;
+
+        @include respond-below(sm) {
+          font-size: 20px;
+        }
+      }
+
+      &.active i,
+      &.active a {
+        color: $theme-color-1;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.hmw-row {
+  padding-right: $hmw-menu-width;
+
+  @include respond-below(lg) {
+    padding-right: 0;
+  }
+}
+
+
+.etrade-logo {
+  width: 100px;
+  height: 20px;
+  //margin-bottom: 5px;
+  background: url("../../../logos/etrade-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ibkr-logo {
+  width: 100px;
+  height: 20px;
+  background: url("../../../logos/ibkr-logo.png");
+  background-repeat: no-repeat;
+}

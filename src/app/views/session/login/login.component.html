@@ -1,0 +1,129 @@
+<ng-container *ngIf="loginState$ | async as loginState">
+  <div class="card auth-card">
+    <div class="position-relative image-side">
+
+      <p class="text-muted mb-0">
+        Please use your credentials to login.
+        <br>If you are not a member, please
+        <a routerLink="/session/register" class="text-white white-underline-link">register</a>.
+      </p>
+    </div>
+    <div class="form-side">
+
+      <div class="navbar-logo justify-content-center mb-4">
+        <div style="display: flex; width: 100px;" class="dark"></div>
+      </div>
+
+      <form #loginForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+        <div class="content-group">
+          <span class="title text-bold-medium ml-1 mb-4">{{ 'Login' | uppercase}} </span>
+
+          <label class="form-group has-float-label">
+            <input class="form-control" required email ngModel #email="ngModel" name="email"/>
+            <!--[(ngModel)]="emailModel"-->
+            <span>{{ 'session.login.placeholder.email' | translate }}</span>
+            <div *ngIf="!email.valid && loginForm.submitted" class="invalid-tooltip">Email is required!</div>
+          </label>
+
+          <label class="form-group has-float-label">
+            <input class="form-control" type="password" placeholder="" required ngModel #password="ngModel"
+              name="password"/>
+
+              <!--[(ngModel)]="passwordModel"-->
+            <span>{{ 'session.login.placeholder.password' | translate }}</span>
+            <div *ngIf="!password.valid && loginForm.submitted" class="invalid-tooltip">Password is required!</div>
+          </label>
+        </div>
+
+        <div class="ml-2 mr-2 mt-4 d-flex justify-content-between align-items-center">
+          <a routerLink="/session/forgot-password">{{ 'session.login.forgot-password' | translate }}</a>
+
+          <button [ngClass]="{'show-spinner': loginState.loading}"
+            class="btn btn-primary btn-lg btn-shadow btn-multiple-state" [disabled]="loginState.loading">
+
+            <div class="spinner d-inline-block">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+
+            <span class="label">
+              {{ 'session.login.title' | translate | uppercase }}
+            </span>
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</ng-container>
+<simple-notifications></simple-notifications>
+
+<!-- <ng-container *ngIf="loginState$ | async as loginState">
+  <div class="card auth-card">
+    <div class="position-relative image-side">
+
+      <p class="text-muted mb-0">
+        Please use your credentials to login.
+        <br>If you are not a member, please
+        <a routerLink="/session/register" class="text-white white-underline-link">register</a>.
+      </p>
+    </div>
+    <div class="form-side">
+
+      <div class="navbar-logo pull-left mb-4">
+        <div class="black"></div>
+        <span class="ml-2 text-black text-bold">{{ 'title.short' | translate }}</span>
+      </div>
+      
+
+      <form #loginForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+        <div class="content-group">
+          <p class="title text-bold-medium ml-1 mb-4">{{ 'Login' | uppercase}} </p>
+
+          <label class="form-group has-float-label">
+            <input class="form-control" required email ngModel #email="ngModel" name="email"/>
+      
+            <span>{{ 'session.login.placeholder.email' | translate }}</span>
+            <div *ngIf="!email.valid && loginForm.submitted" class="invalid-tooltip">Email is required!</div>
+          </label>
+
+          <label class="form-group has-float-label">
+            <input class="form-control" type="password" placeholder="" required ngModel #password="ngModel"
+              name="password"/>
+
+      
+            <span>{{ 'session.login.placeholder.password' | translate }}</span>
+            <div *ngIf="!password.valid && loginForm.submitted" class="invalid-tooltip">Password is required!</div>
+          </label>
+        </div>
+
+        <div class="ml-2 mr-2 mt-4 d-flex justify-content-between align-items-center">
+          <a routerLink="/session/forgot-password">{{ 'session.login.forgot-password' | translate }}</a>
+
+          <button [ngClass]="{'show-spinner': loginState.loading}"
+            class="btn btn-primary btn-lg btn-shadow btn-multiple-state" [disabled]="loginState.loading">
+
+            <div class="spinner d-inline-block">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+
+            <span class="label">
+              {{ 'session.login.title' | translate | uppercase }}
+            </span>
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</ng-container>
+<simple-notifications></simple-notifications> -->

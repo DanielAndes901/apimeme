@@ -1,0 +1,89 @@
+<div class="section header">
+
+    <div class="row main-row">
+
+        <div class="container" [ngClass]="routeAnimationsElements">
+
+            <div class="col-12 offset-0 col-lg-10 offset-lg-1 text-center">
+                <h1>Contact Us</h1>
+            </div>
+
+            <div class="col-12 offset-0 col-lg-10 offset-lg-1 text-center">
+                <p>
+                    Please contact me in case of suggestions or questions.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="content-row">
+
+    <div class="container">
+
+        <div class="col-18 offset-0 col-lg-12 offset-lg-0" [ngClass]="routeAnimationsElements">
+
+
+            <div class="card auth-card">
+                <div class="position-relative image-side ">
+                    <h4 class=" text-white text-bold">CONTACT DETAILS</h4>
+                    <p class="white mb-0">
+                        Please contact me in case of suggestions or questions.
+                    </p>
+
+                    <h6 class="text-white text-bold mt-4">MAIL</h6>
+                    <p class="white mb-0">
+                        valentingamesapps55@gmail.com
+                    </p>
+
+                    <h6 class="text-white text-bold mt-4">ADDRESS</h6>
+                    <p class="white mb-0">
+                        Torget 1, 1830 Askim, Norway
+                    </p>
+                </div>
+                
+                <div class="form-side">
+                    <a class="c-pointer">
+                        <span class="logo-single"></span>
+                    </a>
+                    <h6 class="text-black text-bold mb-4">Contact Us</h6>
+
+                    <form #contactForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+                        <label class="form-group has-float-label">
+                            <input class="form-control" required ngModel #displayName="ngModel" name="displayName" />
+                            <span>{{ 'user.fullname' | translate }}</span>
+                            <div *ngIf="!displayName.valid && contactForm.submitted" class="invalid-tooltip">
+                                Name is required!</div>
+                        </label>
+                        <label class="form-group has-float-label">
+                            <input class="form-control" required email ngModel #email="ngModel" name="email" />
+                            <span>{{ 'user.email' | translate }}</span>
+                            <div *ngIf="!email.valid && contactForm.submitted" class="invalid-tooltip">Email is
+                                required!</div>
+                            <div *ngIf="email?.errors?.email && contactForm.submitted" class="invalid-tooltip">
+                                Email must be a valid address!</div>
+                        </label>
+
+                        <label class="form-group has-float-label">
+                            <textarea class="form-control" rows="10"></textarea>
+                            <span>{{ 'user.letter' | translate }}</span>
+                        </label>
+
+                        
+                        <div class="d-flex justify-content-end align-items-center">
+                        
+                            <hmw-state-button [btnClass]="'btn btn-primary btn-lg btn-shadow'"
+                                [currentState]="buttonState" [isDisabled]="buttonDisabled" click="onLoginClick()">
+                                {{ 'user.send-button' | translate | uppercase }}
+                            </hmw-state-button>
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

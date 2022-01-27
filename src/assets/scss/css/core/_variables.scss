@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700");
+
+$main-menu-item-height: 110px;
+$main-menu-width: 120px;
+$main-menu-width-lg: 110px;
+$main-menu-width-md: 100px;
+$main-menu-width-xs: 90px;
+
+$sub-menu-width: 230px;
+$sub-menu-width-lg: 230px;
+$sub-menu-width-md: 230px;
+$sub-menu-width-xs: 230px;
+
+$navbar-height: 80px;
+$navbar-height-xs: 70px;
+$navbar-height-md: 60px;
+$navbar-height-lg: 70px;
+
+$main-margin: 50px;
+$main-margin-lg: 40px;
+$main-margin-md: 30px;
+$main-margin-xs: 10px;
+
+$hmw-menu-width: 280px;
+
+$main-menu-item-height-mobile: 90px;
+
+$menu-collapse-time: 300ms;
+$animation-time-long: 1000ms;
+$animation-time-short: 200ms;
+
+$border-radius: 0.1rem;
+$border-radius-rounded: 0.75rem;
+
+$theme-color-purple-monster: #922c88;
+$theme-color-blue-navy: #00365a;
+$theme-color-blue-yale: #145388;
+$theme-color-blue-olympic: #008ecc;
+$theme-color-green-moss: #576a3d;
+$theme-color-green-lime: #6fb327;
+$theme-color-orange-carrot: #ed7117;
+$theme-color-red-ruby: #900604;
+$theme-color-yellow-granola: #c0a145;
+$theme-color-grey-steel: #48494b;
+
+$info-color: #3195a5;
+$success-color: #3e884f;
+$warning-color: #b69329;
+$error-color: #c43d4b;
+
+$logo-path: "../../../logos/black.svg";
+$logo-path-mobile: "../../../logos/mobile.svg";
+
+$lp-logo-path-pinned: "../../../logos/black.svg";
+$lp-logo-path: "../../../logos/white-full.svg";
+
+$lp-background-path : '/assets/images/background.png';
+
+$lp-background-portfolio-path : '/assets/images/portfolio/portfolio.png';
+$lp-background-portfolio-detail-path : '/assets/images/portfolio/detail.png';
+
+$slider-1-img: url('../../../images/slider/1.png');
+$slider-2-img: url('../../../images/slider/2.png');
+$slider-3-img: url('../../../images/slider/3.png');
+$slider-4-img: url('../../../images/slider/4.png');

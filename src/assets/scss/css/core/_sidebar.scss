@@ -1,0 +1,68 @@
+// Sidebar
+.menu {
+  right: 0;
+  left: initial;
+
+  .main-menu {
+    left: initial;
+    right: 0;
+
+    ul li {
+      position: relative;
+
+      &.active:after {
+        content: " ";
+        left: initial;
+        right: 0;
+      }
+    }
+  }
+
+  .sub-menu {
+    left: initial;
+    right: $main-menu-width;
+    border-right: 1px solid $separator-color-light;
+    @include depth(2);
+
+    ul {
+      li {
+        margin-left: initial;
+        margin-right: 30px;
+
+        i {
+          margin-right: initial;
+          margin-left: 10px;
+        }
+
+        &.active:after {
+          left: initial;
+          right: -16px;
+        }
+      }
+    }
+
+    ul.inner-level-menu {
+      li {
+        &.active:after {
+          left: initial;
+          right: -22px;
+        }
+      }
+    }
+
+    @include respond-below(xl) {
+      left: initial;
+      right: $main-menu-width-lg;
+    }
+
+    @include respond-below(lg) {
+      left: initial;
+      right: $main-menu-width-md;
+    }
+
+    @include respond-below(sm) {
+      left: initial;
+      right: $main-menu-width-xs;
+    }
+  }
+}

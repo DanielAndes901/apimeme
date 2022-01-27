@@ -1,0 +1,123 @@
+.text-editor-form {
+   .card {
+      display: inline-block;
+
+      .card-body {
+         padding-left: 0;
+         padding-right: 0;
+         padding-bottom: 0.5rem;
+      }
+   }
+
+   .mat-form-field-flex > .mat-form-field-infix {
+      padding-top: 0.4em !important;
+      padding-bottom: 0.8em !important;
+   }
+
+   .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+      transform: translateY(-1.7em) scale(0.75);
+      width: 133.33333%;
+   }
+
+   .mat-form-field-wrapper {
+      padding-bottom: 1.34375em;
+      display: contents;
+   }
+
+   .text-area {
+      flex-direction: row;
+      text-align: center;
+      padding-bottom: 10px;
+   }
+
+   .field-container {
+      flex-direction: column;
+      text-align: left;
+   }
+
+   .form-group {
+      display: inline-block;
+
+      width: 100% !important;
+      border: none;
+
+      padding-bottom: 0px;
+      padding-left: 13px;
+      padding-right: 13px;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 0px;
+   }
+
+   label {
+      position: relative;
+      top: 10;
+      font-size: 14px;
+      font-weight: 700;
+      color: black;
+
+      padding-top: -10px;
+
+      margin-bottom: 0px;
+
+      text-transform: uppercase;
+      background-color: white;
+   }
+
+   mat-label {
+      font-size: large;
+      font-weight: 500;
+   }
+}
+
+.image-editor-form {
+   
+   .card {
+
+      display: inline-flex;
+      border: none !important;
+      border-radius: 0px !important;
+      box-shadow: none !important;
+      height: 400px;
+      width: 100%;
+      overflow: hidden;
+
+      .card-img-top {
+         object-fit: cover;
+         height: 100%;
+      }
+
+      .card-body {
+         display: flex;
+         flex-direction: column;
+         padding: 0 !important;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+
+         .pt-title {
+            display: inline-flex;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            font-size: 20px;
+            text-align: center;
+            justify-content: center !important;
+            align-items: center !important;
+            background-color: transparent !important;
+            color: $theme-color-1 !important;
+         }
+      }
+   }
+
+   .rounded .card-img-top {
+      border-top-left-radius: 0; 
+      border-top-right-radius: 0; 
+      border-bottom-left-radius: 0; 
+      border-bottom-left-radius: initial; 
+      border-bottom-right-radius: 0;
+      border-bottom-right-radius: initial;
+   }
+}
+

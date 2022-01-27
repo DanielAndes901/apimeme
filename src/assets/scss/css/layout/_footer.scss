@@ -1,0 +1,186 @@
+
+  .footer-transparent {
+        
+    z-index: 5 !important;
+    background: rgba(0, 0, 0, 0.1);
+        
+    bottom : 0;
+    position: absolute;
+    width: 100%;
+    box-shadow: initial;
+
+    .nav-item {
+      display: inline-flex;
+      text-align: center;
+      justify-content: center;
+      width: 200px;
+    }
+
+    @include respond-below(xl) {
+      .nav-item { 
+        width: 190px;
+      }
+    }
+
+    @include respond-below(lg) {
+      .nav-item { 
+        width: 100%;
+      }
+    }
+
+
+    a {
+      color: $button-text-color;
+      transition: color $animation-time-short;
+      outline: none !important;
+    
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: rgba($color: $button-text-color, $alpha: 0.5);
+      }
+    }
+    
+  }
+  
+  .footer-colored {
+    z-index: 5 !important;
+    background: $theme-color-1;
+    width: 100%;
+  
+    .nav-item {
+      display: inline-flex;
+      text-align: center;
+      justify-content: center;
+      width: 200px;
+    }
+
+    @include respond-below(xl) {
+      .nav-item { 
+        width: 190px;
+      }
+    }
+
+    @include respond-below(lg) {
+      .nav-item { 
+        width: 100%;
+      }
+    }
+
+
+    top : inherit;
+    position: absolute;
+    box-shadow: initial;
+
+    a {
+      color: $button-text-color;
+      transition: color $animation-time-short;
+      outline: none !important;
+    
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: rgba($color: $button-text-color, $alpha: 0.5);
+      }
+    }
+    
+    
+  }
+
+
+ .footer {
+
+    .footer-content {
+
+      padding-top: 280px;
+
+      @include respond-below(sm) {
+        padding-top: 140px;
+      }
+
+      @include respond-below(xs) {
+        padding-top: 80px;
+      }
+    }
+
+    .footer-circle-button {
+      margin-top: 100px;
+      margin-right: -50px;
+
+      @include respond-below(md) {
+        margin-top: 110px;
+      }
+    }
+
+    .footer-logo {
+      width: 140px;
+      margin-bottom: 200px;
+
+      @include respond-below(md) {
+        margin-bottom: 300px;
+      }
+
+    }
+
+    .footer-menu {
+      p {
+        color: $button-text-color;
+        font-size: 1rem;
+      }
+
+      a {
+        font-size: 1rem;
+        color: $button-text-color;
+
+        &:hover,
+        &:focus {
+          color: darken($theme-color-1, 20%);
+        }
+      }
+
+      .collapse-button {
+        i {
+          font-size: 0.75rem;
+          margin-left: 5px;
+        }
+
+        &:hover,
+        &:focus {
+          color: $button-text-color;
+        }
+      }
+    }
+
+    .separator {
+      opacity: 0.3;
+    }
+
+    .copyright {
+      p {
+        color: $button-text-color;
+      }
+      background-color: transparent;
+    }
+
+    .social-icons {
+      ul {
+        margin-bottom: 0;
+      }
+
+      li {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+
+        a {
+          color: $button-text-color;
+          font-size: 1.2rem;
+
+          &:hover,
+          &:active {
+            color: rgba($button-text-color, 0.7);
+          }
+        }
+      }
+    }
+  }
+ 

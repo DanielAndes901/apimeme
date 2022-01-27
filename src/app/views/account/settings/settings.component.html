@@ -1,0 +1,68 @@
+<div class="container">
+
+    <div class="card-profile">
+        <mat-card class="ml-4 mr-4">
+
+            <div class="card-header">
+                <h5 class="ml-4 card-title text-bold mt-2">{{ 'settings.title' | translate }}</h5>
+            </div>
+
+            <br>
+
+            <div class="card-body">
+                <ng-container *ngIf="settings$ | async as settings">
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-group text-left">
+
+                                <label class="text-bold text-semi-muted">{{ 'settings.language.title' | translate  }}</label>
+
+                                <div class="pt-2 pb-4">
+                                    <mat-form-field appearance="outline">
+                                        <mat-select [placeholder]="'settings.general.placeholder' | translate"
+                                            [ngModel]="settings.language" (selectionChange)="onLanguageSelect($event)"
+                                            name="language">
+                                            <mat-option *ngFor="let l of languages" [value]="l.value">
+                                                {{ 'settings.language.' + l.label | translate }}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="form-group text-left">
+
+                                <label class="text-bold text-semi-muted">{{ 'settings.themes.title' | translate  }}</label>
+
+                                <div class="pt-2 pb-4">
+                                    <mat-form-field appearance="outline">
+
+                                        <mat-select [placeholder]="'settings.themes.placeholder' | translate"
+                                            [ngModel]="settings.theme" (selectionChange)="onThemeSelect($event)"
+                                            name="themes">
+                                            <mat-option *ngFor="let t of themes" [value]="t.value">
+                                                {{ 'settings.themes.' + t.label | translate }}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </ng-container>
+            </div>
+
+            <div style="height : 80px;" class="card-footer pt-4 pb-4"></div>
+        </mat-card>
+    </div>
+</div>

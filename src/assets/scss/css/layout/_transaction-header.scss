@@ -1,0 +1,53 @@
+.transaction-header {
+       
+
+  .form-control,
+  .bootstrap-tagsinput {
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    line-height: 1;
+    border: 1px solid $separator-color;
+    background: $input-background;
+    color: $primary-color;
+    border-color: $separator-color;
+    height: initial;
+  }
+
+
+  .display-options-container {
+    margin-bottom: 0.25rem;
+    @include respond-below(xs) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .search-sm {
+    position: relative;
+  
+    input {
+      background: none;
+      outline: initial !important;
+      border-radius: 5px;
+      padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      line-height: 1.8;
+      border: 1px solid $secondary-color;
+      color: $primary-color;
+    }
+  
+    &:after {
+      font-family: "simple-line-icons";
+      content: "\E090";
+      font-size: 14px;
+      color: $secondary-color;
+      position: absolute;
+      right: 10px;
+      text-align: center;
+      cursor: pointer;
+      top: 2px;
+    }
+  }
+  
+}
+

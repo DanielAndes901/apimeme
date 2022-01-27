@@ -1,0 +1,157 @@
+.ngx-datatable .datatable-header {
+  margin-bottom: 15px;
+}
+
+.ngx-datatable.fixed-header
+  .datatable-header
+  .datatable-header-inner
+  .datatable-header-cell.sortable
+  .datatable-header-cell-template-wrap {
+  padding-right: 30px;
+  white-space: nowrap;
+  font-weight: bold;
+
+  &:before {
+    right: 3em;
+    content: "\2191";
+    position: absolute;
+    opacity: 0.3;
+  }
+
+  &:after {
+    right: 2.5em;
+    content: "\2193";
+    position: absolute;
+    opacity: 0.3;
+  }
+}
+
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+  &.sort-active.sort-asc .datatable-header-cell-template-wrap:after {
+    opacity: 1;
+  }
+
+  &.sort-active.sort-desc .datatable-header-cell-template-wrap:before {
+    opacity: 1;
+  }
+}
+
+.datatable-body-cell-label {
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $separator-color-light;
+  padding-bottom: 35px;
+}
+
+datatable-row-wrapper:last-of-type .datatable-body-row {
+  border-bottom: initial !important;
+}
+
+.ngx-datatable .custom-control.custom-checkbox {
+  margin-top: -4px;
+}
+.data-table-scrollable .datatable-body .datatable-scroll {
+  padding-bottom: 20px;
+}
+.data-table-rows {
+  .ngx-datatable {
+    margin-left: -15px;
+    padding-left: 15px;
+    margin-right: -15px;
+    padding-right: 15px;
+  }
+
+  .ngx-datatable .datatable-body .datatable-row-wrapper {
+    background: $foreground-color;
+    border-radius: $border-radius-rounded;
+    border: initial;
+    width: 100% !important;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    @include depth(1);
+  }
+
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {
+    padding-top: 1.25rem;
+    padding-bottom: 2.5rem;
+    border: initial;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    width: 100% !important;
+  }
+
+  .ngx-datatable .datatable-body .datatable-scroll {
+    width: 100% !important;
+  }
+
+  .ngx-datatable .datatable-body .datatable-row-wrapper {
+    width: 100% !important;
+  }
+
+  datatable-selection {
+    width: 100% !important;
+  }
+
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell,
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {
+    padding-left: 1.5rem;
+  }
+
+  .ngx-datatable.fixed-header
+    .datatable-header
+    .datatable-header-inner
+    .datatable-header-cell.sortable
+    .datatable-header-cell-template-wrap {
+    padding-left: 25px;
+  }
+
+  .ngx-datatable.fixed-header
+    .datatable-header
+    .datatable-header-inner
+    .datatable-header-cell.sortable
+    .datatable-header-cell-template-wrap:before {
+    right: initial;
+    left: 0.5em;
+  }
+
+  .ngx-datatable.fixed-header
+    .datatable-header
+    .datatable-header-inner
+    .datatable-header-cell.sortable
+    .datatable-header-cell-template-wrap:after {
+    right: initial;
+    left: 1em;
+  }
+}
+
+.data-table-responsive {
+  .ngx-datatable.fixed-row
+    .datatable-scroll
+    .datatable-body-row
+    .datatable-row-center
+    datatable-body-cell:first-of-type {
+    padding-left: 0 !important;
+
+    .glyph-icon {
+      position: absolute;
+      left: 12px;
+      top: 4px;
+    }
+  }
+
+  .datatable-row-detail {
+    @include respond-above(lg) {
+      display: none;
+    }
+
+    .detail-content {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<div class="page-one">
+
+    <div class="section">
+        <div class="container">
+
+            <div class="col-8 offset-xl-2 list">
+
+                <div class="row">
+
+                    <div class="col-xl-4 col-lg-4 col-12 col-sm-6 mb-4" *ngFor="let p of data; let i=index">
+
+                        <div class="thumb-element">
+                            <div class="card">
+
+                                <div class="position-relative">
+                                    <a href="javascript:;"><img class="card-img-top" [src]="p.img" [alt]="p.name"></a>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <p class="list-item-heading mb-4 pt-1">{{p.name}}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <pagination [totalItems]="totalItem" [itemsPerPage]="itemsPerPage" [rotate]="true" [maxSize]="5"
+                    [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)" class="justify-content-center"
+                    [customNextTemplate]="nextTemplate" [customPreviousTemplate]="prevTemplate">
+                </pagination>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
+    <i class='simple-icon-arrow-right'></i>
+</ng-template>
+<ng-template #prevTemplate let-disabled="disabled" let-currentPage="currentPage">
+    <i class='simple-icon-arrow-left'></i>
+</ng-template>

@@ -1,0 +1,131 @@
+
+.slide-card {
+
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  vertical-align: middle;
+  align-items: center;
+  
+  .text-side {
+    width: 45%;
+  }
+
+  .image-side {
+    width: 55%;
+  }
+
+}
+
+
+
+.ngucarousel {
+  .arrow {
+    opacity: 0;
+  }
+
+  &:hover {
+    .arrow {
+      opacity: 1;
+    }
+
+    .arrow-left {
+      left: 0;
+    }
+
+    .arrow-right {
+      right: 0;
+    }
+  }
+}
+
+.slider-img-1 {
+  background-image: $slider-1-img;
+}
+
+.slider-img-2 {
+  background-image: $slider-2-img;
+}
+
+.slider-img-3 {
+  background-image: $slider-3-img;
+}
+
+.slider-img-4 {
+  background-image: $slider-4-img;
+}
+
+
+.ngx-slider-content {
+
+  background-color: transparent;
+
+  h1 {
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+  }
+
+  @include respond-below(xl) {
+    .ngx-slider-content {
+      h1 {
+        font-size: 2rem;
+      }
+  
+      h2 {
+        font-size: 1.5rem !important;
+      }
+    }
+  
+    .bannerStyle {
+      height: 500px;
+    }
+  }
+
+}
+
+.ngx-slider-content {
+
+  background-color: transparent;
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    transform: scale(0.8);
+  }
+}
+
+.bannerStyle {
+  background-color: transparent;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+}
+
+.slider-text-area {
+  
+  display: inline-flex !important;
+  text-align: left !important;
+  // width: 30%;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-top: 1rem;
+
+  p {
+    font-size: 1.2rem !important;
+    line-height: 1.5rem !important;
+    color: $theme-color-1;
+  }
+
+}

@@ -1,0 +1,32 @@
+<ngx-headroom class="hmw-header-nav">
+
+  <nav>
+    <div class="navbar container d-flex align-items-center justify-content-between">
+
+      <div class="navbar-left">
+        <div class="navbar-logo pull-left">
+          <div class="white"></div>
+          <div class="dark"></div>
+        </div>
+      </div>
+      <div class="navbar-right">
+        <div class="d-flex align-items-center justify-content-end">
+
+          <ul class="navbar-nav d-none d-lg-flex flex-row">
+
+            <li class="nav-item" *ngFor="let item of menuService.getHeaderMenuItems()">
+              <a [routerLink]="[item.link]">{{item.name}}</a>
+            </li>
+
+          </ul>
+
+       
+          <span class="mobile-menu-button" (click)="onToggleMobileMenuVisible(); $event.stopPropagation()">
+            <i class="simple-icon-menu"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+</ngx-headroom>
